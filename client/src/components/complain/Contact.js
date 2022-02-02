@@ -1,8 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import default_profile from "../../assets/blank-profile.png"
+import default_profile from '../../assets/blank-profile.png';
 
 export default function Contact({ dataContact, clickContact, contact }) {
+  console.log(dataContact);
+
   return (
     <>
       {dataContact.length > 0 && (
@@ -11,7 +13,7 @@ export default function Contact({ dataContact, clickContact, contact }) {
             <div
               key={item.id}
               className={`contact mt-3 p-2 ${
-                contact?.id === item?.id && "contact-active"
+                contact?.id === item?.id && 'contact-active'
               }`}
               onClick={() => {
                 clickContact(item);
